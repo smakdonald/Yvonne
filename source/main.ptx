@@ -1,0 +1,2551 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<docinfo>
+
+		<!-- the other option is "long" which will produce an -->
+		<!-- entire front matter section with more headings   -->
+		<author-biographies length="short" />
+	
+		
+		<brandlogo url="https://yvonnexlai.com/" source="vivi.jpeg" />
+		
+	
+		<!--
+		<covers front="images/original-front-cover-aata.pdf"
+				back="images/plain-back-cover-aata.pdf"/>
+		-->
+	
+		<!-- Prefix to enhance Sage notebook contents -->
+		<!--
+		<initialism>AATA</initialism>
+		-->
+	
+		<macros>
+			<!-- Operators     -->
+			\def\ann{\operatorname{ann}}
+			\newcommand{\Ass}{\operatorname{Ass}}
+			\def\Aut{\operatorname{Aut}}
+			\def\can{{\mathrm {can}}}
+			\def\char{\operatorname{char}}
+			\def\cp{\operatorname{CharPoly}}
+			\def\codim{\operatorname{codim}} 
+			\def\coker{\operatorname{coker}}
+			\DeclareMathOperator*{\colim}{colim} 
+			\def\cont{\operatorname{cont}} 
+			\def\diam{\operatorname{diam}} 
+			\def\dm{\operatorname{dim}} 
+			\DeclareMathOperator{\edim}{embdim} 
+			\def\End{\operatorname{End}} 
+			\def\eval{\operatorname{eval}} 
+			\def\Ext{\operatorname{Ext}} 
+			\def\Frac{\operatorname{Frac}}
+			\def\Fun{\operatorname{Fun}}
+			\def\Gal{\operatorname{Gal}}
+			\def\gcd{\operatorname{gcd}}
+			\newcommand{\GL}{\operatorname{GL}} 
+			\newcommand{\ht}{\operatorname{height}} 
+			\def\Hom{\operatorname{Hom}} 
+			\def\id{\operatorname{id}} 
+			\def\im{\operatorname{im}} 
+			\def\Inn{\operatorname{Inn}}
+			\def\ker{\operatorname{ker}}
+			\def\lcm{\operatorname{lcm}} 
+			\def\Mat{\operatorname{Mat}}
+			\newcommand{\Min}{\operatorname{Min}}
+			\def\mp{\operatorname{MinPoly}}
+			\def\mSpec{\operatorname{mSpec}}
+			\def\MSpec{\operatorname{MSpec}}
+			\def\null{\operatorname{Nul}}
+			\DeclareMathOperator{\ns}{nullspace}
+			\newcommand{\opp}{\operatorname{opp}}
+			\def\Orb{\operatorname{Orb}} 
+			\def\Out{\operatorname{Out}}
+			\def\Perm{\operatorname{Perm}}
+			\def\ptstab{\operatorname{PtStab}} 
+			\def\rad{\operatorname{rad}}
+			\DeclareMathOperator{\range}{range}
+			\def\rank{\operatorname{rank}}
+			\def\res{\operatorname{res}}
+			\def\setstab{\operatorname{SetStab}}
+			\def\sign{{\operatorname{sign}}}
+			\newcommand{\SL}{\operatorname{SL}}
+			\def\Span{\operatorname{Span}}
+			\def\Spec{\operatorname{Spec}}
+			\def\Stab{\operatorname{Stab}} 
+			\DeclareMathOperator{\Supp}{Supp}
+			\def\Syl{\operatorname{Syl}}
+			\def\Tor{\operatorname{Tor}}
+			\def\trace{\operatorname{trace}}
+			\def\uSpec{\operatorname{\underline{Spec}}}
+			<!-- Categories     -->
+			\newcommand{\Ob}{\mathrm{Ob}}
+			\newcommand{\Set}{\mathbf{Set}}
+			\newcommand{\Grp}{\mathbf{Grp}}
+			\newcommand{\Ab}{\mathbf{Ab}}
+			\newcommand{\Sgrp}{\mathbf{Sgrp}}
+			\newcommand{\Ring}{\mathbf{Ring}} 
+			\newcommand{\Fld}{\mathbf{Fld}}
+			\newcommand{\cRing}{\mathbf{cRing}}
+			\newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+			\newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+			\newcommand{\vs}[1]{#1-\mathbf{vect}}
+			\newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+			\newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+			\newcommand{\Top}{\mathbf{Top}} 
+			\newcommand{\Setp}{\mathbf{Set}_*} 
+			\newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+			\newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+			\newcommand{\PO}{\mathbf{PO}}
+			\newcommand{\Cont}{\mathrm{Cont}}
+			\newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+			\newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+			<!-- Greek     -->
+			\def\l{\lambda}
+			\def\lx{\lambda_x}
+			\newcommand{\a}{\alpha}
+			\def\b{\beta}
+			\def\d{\delta}
+			\def\e{\varepsilon}
+			\def\g{\gamma}
+			\def\t{\theta}
+			\def\s{\sigma}
+			\def\z{\zeta}
+			\def\vp{\varphi}
+			<!-- Letters     -->
+			<!-- MathBB     -->
+			\newcommand{\A}{\mathbb{A}}
+			\newcommand{\B}{\mathbb{B}}
+			\newcommand{\C}{\mathbb{C}}
+			\newcommand{\D}{\mathbb{D}}
+			\newcommand{\E}{\mathbb{E}}
+			\newcommand{\F}{\mathbb{F}}
+			\newcommand{\G}{\mathbb{G}}
+			\newcommand{\H}{\mathbb{H}}
+			\newcommand{\I}{\mathbb{I}}
+			\newcommand{\J}{\mathbb{J}}
+			\newcommand{\K}{\mathbb{K}}
+			\newcommand{\L}{\mathbb{L}} 
+			\newcommand{\M}{\mathbb{M}}
+			\newcommand{\N}{\mathbb{N}}
+			\newcommand{\O}{\mathbb{O}}
+			\newcommand{\P}{\mathbb{P}}
+			\newcommand{\Q}{\mathbb{Q}} 
+			\newcommand{\R}{\mathbb{R}} 
+			\newcommand{\S}{\mathbb{S}}
+			\newcommand{\T}{\mathbb{T}}
+			\newcommand{\U}{\mathbb{U}}
+			\newcommand{\V}{\mathbb{V}}
+			\newcommand{\W}{\mathbb{W}}
+			\newcommand{\X}{\mathbb{X}}
+			\newcommand{\Y}{\mathbb{Y}}
+			\newcommand{\Z}{\mathbb{Z}} 
+			\newcommand{\ON}{\mathbb{ON}}
+			<!-- MathCal     -->
+			\def\cA{\mathcal A} 
+			\def\cB{\mathcal B} 
+			\def\cC{\mathcal C} 
+			\def\cD{\mathcal D} 
+			\def\cE{\mathcal E} 
+			\def\cF{\mathcal F} 
+			\def\cG{\mathcal G} 
+			\def\cH{\mathcal H} 
+			\def\cI{\mathcal I} 
+			\def\cJ{\mathcal J} 
+			\def\cK{\mathcal K} 
+			\def\cL{\mathcal L}
+			\def\cM{\mathcal M} 
+			\def\cN{\mathcal N} 
+			\def\cO{\mathcal O} 
+			\def\cP{\mathcal P} 
+			\def\cQ{\mathcal Q} 
+			\def\cR{\mathcal R} 
+			\def\cS{\mathcal S} 
+			\def\cT{\mathcal T} 
+			\def\cU{\mathcal U} 
+			\def\cV{\mathcal V} 
+			\def\cW{\mathcal W} 
+			\def\cX{\mathcal X} 
+			\def\cY{\mathcal Y} 
+			\def\cZ{\mathcal Z} 
+			<!-- MathFrak     -->
+			\newcommand{\fa}{{\mathfrak a}} 
+			\newcommand{\fb}{{\mathfrak b}} 
+			\newcommand{\fc}{{\mathfrak c}} 
+			\newcommand{\fd}{{\mathfrak d}} 
+			\newcommand{\fe}{{\mathfrak e}}
+			\newcommand{\fm}{{\mathfrak m}} 
+			\newcommand{\fp}{{\mathfrak p}} 
+			\newcommand{\fq}{{\mathfrak q}} 
+			\newcommand{\fK}{{\mathfrak K}} 
+			\newcommand{\fR}{{\mathfrak R}} 
+			<!-- MathScr     -->
+			\def\sA{\mathscr A} 
+			\def\sB{\mathscr B} 
+			\def\sC{\mathscr C} 
+			\def\sD{\mathscr D} 
+			\def\sE{\mathscr E} 
+			\def\sF{\mathscr F} 
+			\def\sG{\mathscr G} 
+			\def\sH{\mathscr H} 
+			\def\sI{\mathscr I} 
+			\def\sJ{\mathscr J} 
+			\def\sK{\mathscr K} 
+			\def\sL{\mathscr L}
+			\def\sM{\mathscr M}
+			\def\sN{\mathscr N}
+			\def\sO{\mathscr O}
+			\def\sP{\mathscr P}
+			\def\sQ{\mathscr Q}
+			\def\sR{\mathscr R}
+			\def\sS{\mathscr S}
+			\def\sT{\mathscr T}
+			\def\sU{\mathscr U}
+			\def\sV{\mathscr V}
+			\def\sW{\mathscr W}
+			\def\sX{\mathscr X}
+			\def\sY{\mathscr Y}
+			\def\sZ{\mathscr Z}
+			<!-- Tildes     -->
+			\def\tS{\tilde{S}}
+			<!-- Algebra     -->
+			\def\sdp{\rtimes}
+			\newcommand{\tensor}{\otimes} 
+			\newcommand{\igen}[1]{\langle #1 \rangle} 
+			\def\nsg{\unlhd} 
+			\def\kval{{k-\mathrm{valued}}} 
+			\def\kalg{{k-\mathrm{alg}}}
+			\newcommand\GG[2]{\Gal(#1/#2)}
+			<!-- Matrices     -->
+			\newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+			\newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+			\newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+			\def\ob{{\mathfrak{ob}} }
+			<!-- Misc     -->
+			\def\qed{\square}
+			\def\sse{\subseteq}
+			\def\ss{\subset} 
+			\def\ssne{\subsetneq}
+			\def\sm{\setminus}
+			\def\inv{^{-1}} 
+			\newcommand{\es}{\emptyset} 
+			\newcommand{\Zm}[1]{\Z/({#1})} 
+			\def\ov#1{\overline{#1}} 
+			\def\xdots{x_1, \dots, x_n} 
+			\def\adots{a_1, \dots, a_n} 
+			\def\bdots{b_1, \dots, b_n} 
+			\def\udots{u_1, \dots, u_n} 
+			\newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+			\def\th{^{th}} 
+			\def\htpy{\simeq_{\mathrm{htpc}}} 
+			<!-- Math Text     -->
+			\def\textand{ \, \text{and} \, } 
+			\def\textor{ \, \text{or} \, } 
+			\def\textfor{ \, \text{for} \, } 
+			\def\textfa{ \, \text{for all} \, } 
+			\def\textst{ \, \text{such that} \, } 
+			\def\textin{ \, \text{in} \, } 
+			\def\fg{ \, \text{finitely generated} \, }
+			\newcommand{\op}{\mathrm{op}}
+			<!-- Arrows     -->
+			\newcommand{\xra}[1]{\xrightarrow{#1}} 
+			\newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+			\newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+			\newcommand{\xla}[1]{\xleftarrow{#1}} 
+			\def\lra{\longrightarrow}
+			\def\into{\hookrightarrow}
+			\def\onto{\twoheadrightarrow}
+			<!-- Vectors     -->
+			\newcommand{\vv}[1]{\mathbf{#1}}
+			\newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+			\renewcommand{\v}{\vv{v}}
+			\renewcommand{\u}{\vv{u}}
+			\newcommand{\w}{\vv{w}}
+			\newcommand{\x}{\vv{x}}
+			\renewcommand{\k}{\vv{k}}
+			\newcommand{\0}{\vv{0}}
+			\newcommand{\1}{\vv{1}}
+			\newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+			\newcommand{\us}[1][n]{\vecs{\u}{#1}}
+			\newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+			\newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+			\newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+			\newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+			\newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+			\newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+			\def\td{\tilde{\delta}}
+			\def\oo{\overline{\omega}}
+			\def\ctJ{\tilde{\mathcal J}}
+			\def\tPhi{\tilde{\Phi}}
+			\def\te{\tilde{e}}
+			\def\M{\operatorname{M}}
+			\newcommand{\homotopic}{\simeq}
+			\newcommand{\homeq}{\cong}
+			\newcommand{\iso}{\approx}
+			\newcommand{\dual}{\vee} 
+			\DeclarePairedDelimiter{\abs}{|}{|}
+			\newcommand{\bv}{{\bar{v}}}
+			\newcommand{\bu}{{\bar{u}}}
+			\newcommand{\bw}{{\bar{w}}}
+			\newcommand{\by}{{\bar{y}}}
+			\newcommand{\ba}{{\bar{a}}}
+			\newcommand{\bb}{{\bar{b}}}
+			\newcommand{\bx}{{\bar{x}}}
+			\DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+			\newcommand{\vx}{\underline{x}}
+			\renewcommand{mod}[1]{\text{(mod }{#1})}
+			\newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
+		</macros>
+	
+		<!-- this is the default, but supresses a warning -->
+		<cross-references text="type-global" />
+	
+		<!-- tikz package and libraries for images -->
+		<latex-image-preamble>
+		  \usepackage{tikz}
+		  \usetikzlibrary{backgrounds}
+		  \usetikzlibrary{snakes}
+		  \usepackage{tkz-graph}
+		  \usepackage{tkz-euclide}
+		  \usetikzlibrary{patterns}
+		  \usetikzlibrary{positioning}
+		  \usetikzlibrary{matrix,arrows}
+		  \usetikzlibrary{calc}
+		  \usetikzlibrary{shapes}
+		  \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+		  
+		  \usepackage{pgfplots}
+		</latex-image-preamble>
+
+		<rename element="exercises">Homework</rename>  
+		<rename element="fact">Property</rename>  
+
+	
+	</docinfo>
+
+  <book xml:id="my-great-book"><title>Algebra for Secondary Mathematics Teaching</title>
+    <subtitle>Module 2: From Numbers, to Powers, to Logarithms</subtitle>
+
+    <frontmatter xml:id="frontmatter">
+
+      <titlepage>
+        <author>
+          <personname>James Hart</personname>
+          <department>Somwhere</department>
+          <institution>Someplace</institution>
+        </author>
+
+		<author>
+			<personname>Yvonne Lai</personname>
+			<department>Mathematics</department>
+			<institution>University of Nebraksa - Lincoln</institution>
+		  </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+        <website>
+          <name>
+            <c>example.org</c>
+          </name>
+          <address>https://example.org</address>
+        </website>
+
+        <copyright>
+          <year>2020<ndash />2023</year>
+          <holder>You</holder>
+          <shortlicense> 
+            This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+          </shortlicense>
+        </copyright>
+      </colophon>
+
+    </frontmatter>
+
+    <part xml:id="part-i"><title>From Numbers to Powers</title>
+
+		<introduction>
+			<p>
+				Key concepts of  <xref ref="part-i"/>:
+					<ul>
+						<li>
+							<p>
+								Explanations for powers and properties can be patterned after ones that students saw in middle school.
+							</p>
+						</li>
+		
+					<li>
+						<p>
+							<term>We can use power properties to extend the definition of powers from positive natural powers to 0, integer, rational, and real powers.</term>
+						</p>
+					</li>
+		
+					<li>
+						<p>
+							In defining powers, here and elsewhere, the scope for possible bases depend on well-definedness of the value of the power.
+						</p>
+					</li>
+				</ul>
+			</p>
+
+			<paragraphs component="instructor"><title>Instructor Notes</title>
+				<p>
+					The bolded key concept is emphasized the most in the materials and in the simulations of practice.
+				</p>
+			</paragraphs>
+		</introduction>
+
+		<chapter xml:id="ch-0"><title>Introduction</title>
+
+			<p>
+				Notation is one of the unsung heroes of mathematics. 
+				Good notation allows us to organize our thinking and opens the door to connections between ideas that we might not see otherwise. 
+				Classical <q>power</q> notation is one of the best examples. 
+				Originally introduced as a simple bookkeeping method in the 1600's, power notation opened up a new way of thinking as our understanding of real numbers grew; 
+				and this new thinking ultimately led to powerful classes of functions that are essential tools in much of modern science.
+			</p>
+
+			<p>
+				Let <m>a</m> be a number, and let <m>n</m> be a positive integer. We use the special symbol “<m>a^n</m>" to represent the number we reach using “repeated multiplication by <m>a</m>." 
+				In particular, the symbol <m>a^n</m> is bookkeeping notation, simply telling us how many factors of <m>a</m> appear in the repeated multiplication: 
+				<me>
+					a^n=\underbrace{a\cdot a\cdot\dots \cdot a}_{n\ times}
+				</me> 
+				The superscript indicates the number of times <m>a</m> appears in the multiplication and is known as the <em>exponent</em>, from the Latin phrase <em>expo ponere</em> which means “out of place." 
+				(Michael Stifel is credited with coining the term in the 1500's.) 
+				The number <m>a</m> is now called the <em>base</em> of the expression.
+			</p>
+
+			<aside>
+				<p>
+					In the expression <m>a^n</m>, we say the <term>base</term> is <m>a</m>, the <term>exponent</term> is <m>n</m>. 
+					The entire expression <m>a^n</m> is called a <term>power</term>.
+				</p>
+
+				<p>
+					When <m>n \in \mathbb{N}^+</m>, we define <me>a^n=\underbrace{a\cdot a\cdot\dots \cdot a}_{n\ times}</me> with repeated multiplication by <m>a</m>.
+				</p>
+
+				<p>
+					When <m>n\in \mathbb{Z}, \mathbb{Q}, \mathbb{R}</m>, we need to extend the definition of <m>a^n</m>. 
+					We will do so in this chapter.
+				</p>
+			</aside>
+
+			<p>
+				The expression <m>a^n</m> is referred to as a <em>power</em> of <m>a</m>. 
+				Use of this term to mean repeated multiplication by a number seems to be Greek in origin. 
+				Euclid is known to have used this term (<em>dunamis</em> in Greek), and scholars attribute its first use to Hippocrates of Chios.
+			</p>
+
+			<p>
+				Using superscripts to indicate repeated multiplication is an ancient idea, having first been introduced in very limited form by Diophantus nearly 2,000 years ago in his so-called <em>syncopated</em> algebra. 
+				With the exception of using superscripts, Diophantus' notation bears little resemblance to our modern idea of exponents. 
+				(For example, he used <m>\Delta^Y</m> to represent “the second power of an unknown" and <m>K^Y</m> to represent “the cube of an unknown.")
+			</p>
+
+			<p>
+				The brilliant twelfth-century Muslim mathematician Ibn Yaha al-Maghribi Al-Samawa'al came close to developing modern power notation in his algebra text <em>al-Bahir fi'l-jabr</em> (The Brilliant in Algebra). 
+				In many respects, this text was centuries ahead of its time, but it found little traction outside of the Islamic world. 
+				Some of the ideas appearing in this work (such as polynomial division and considering <m>1/a</m> to be a power of <m>a</m>) would not be systematically tackled in the West until the 1600's.
+			</p>
+
+			<p>
+				The fourteenth-century mathematician Nicolas Oresme is credited as the first Western mathematician to associate numbers with powers of <m>a</m>, although he did not use superscripts. Significantly, he is also the first individual to consider non-integer powers; 
+				he did so in the context of music. 
+				(We will have more to say about this later.)
+			</p>
+
+			<p>
+				Modern power notation seems to have originated (at least in the West) in the fifteenth century through the work of Nicolas Chuquet, although it was not widely used until Renee Descartes popularized it in the 1600's.
+			</p>
+
+			<p>
+				Now that we have introduced the expression <m>a^n</m> as a bookkeeping symbol for repeated multiplication, we can think about productive ways to <em>extend</em> the meaning of this symbol. 
+				Mathematicians often extend the meaning of a symbol using analogy. 
+				Let's look at an example.
+			</p>
+
+			<p>
+				Let “<m>a</m>" be a number. 
+				We know that <m>(-1)a</m> represents the translation from “<m>a</m>" to “<m>0</m>"; 
+				that is, we know that <m>a+(-1)a=0</m>. 
+				In additive thinking, <em>multiplying</em> a real number by <m>-1</m> produces the additive inverse for <m>a</m>.
+			</p>
+
+			<p>
+				Now, let's think about multiplication instead of addition. 
+				The multiplicative inverse for any nonzero number <m>a</m> is defined to be <m>1/a</m>; 
+				that is, we know <m>a\cdot(1/a)=1</m>.
+			</p>
+
+			<p>
+				So, proceeding by analogy, we could <em>define</em> <m>a^{-1}</m> as a symbol that stands for <m>1/a</m>. 
+				By doing this, we would be letting <m>a^{-1}</m> serve a role in <em>multiplication</em> that is analogous to the role <m>-a</m> plays in <em>addition</em>.
+			</p>
+
+			<p>
+				To see whether an extension is useful, we sometimes check whether it satisfies properties that the original use satisfies. 
+				For powers, we would want to make sure that this new definition satisfies power properties such as the power of a power property (<m>(a^{x_1})^{x_2}</m>) or product of power property (<m>a^{x_1}a^{x_2}=a^{x_1+x_2}</m>).
+			</p>
+
+				<p>
+				In <xref ref="part-i"/>, we:
+			</p>
+
+			<p>
+				<ul>
+					<li>
+						<p>
+							Review power properties
+						</p>
+					</li>
+
+					<li>
+						<p>
+							Give a working definition for positive rational powers and integer powers
+						</p>
+					</li>
+
+					<li>
+						<p>
+							Motivate why we need to be careful about our definitions for powers, especially regarding the possible values of the base and exponent.
+						</p>
+					</li>
+				</ul>
+			</p>
+
+			<p>
+				These ideas set up in <xref ref="part-ii" />, where we:
+			</p>
+
+			<p>
+				<ul>
+					<li>
+						<p>
+							Revisit the definitions
+						</p>
+					</li>
+
+					<li>
+						<p>
+							Define real powers.
+						</p>
+					</li>
+				</ul>
+			</p>
+			
+		</chapter>
+
+		<chapter xml:id="ch-i"><title>Natural, Integer, and Rational Numbers and Powers</title>
+
+			<introduction><title>Overview</title>
+				<p>
+					<term>Natural Powers.</term> For the ideas in this chapter to work, we are implicitly assuming that <m>a\geq 0</m>. For this and other reasons, definitions are labelled as drafts. We will discuss this later, but put this out for now.
+				</p>
+
+				<p>
+					<term>Positive Rational Powers.</term> Definition of positive natural powers as repeated multiplication, in parallel with positive natural multiplication as repeated addition. Introduce this parallel.
+				</p>
+
+				<p>
+					<term>Integer Powers.</term> Building the definition for <m>a^{p/q}</m> (for <m>p</m>, <m>q</m>, positive natural numbers) from power properties. Making sense of issues that can come up with notation.
+				</p>
+
+				<p>
+					<term>Rational Powers.</term> Building definitions for <m>a^0</m> and <m>a^{-1}</m>, and other integers.
+				</p>
+
+				<paragraphs component="instructor"><title>Summary</title>
+					<p>
+						<ul>
+							<li>
+											<p>
+							Opener: Sunglasses tasks. Goal: Elicit power properties. Time: 10-15 mins for both.
+						</p>
+							</li>
+		
+							<li>
+											<p>
+							Exponential expressions and power properties. Goal: Framing the chapter?s work, and things that come up in teaching. Time: 20 minutes.
+						</p>
+							</li>
+		
+							<li>
+											<p>
+							From numbers to powers: naturals. Goal: Definition of positive natural powers as repeated multiplication, in parallel with positive natural multiplication as repeated addition. Introduce this parallel. Time: 20 mins.
+						</p>
+							</li>
+		
+							<li>
+											<p>
+							From numbers to powers: positive rationals. Goal: Building the definition for <m>a^{p/q}</m> (for <m>p</m>, <m>q</m>, positive natural numbers) from power properties. Making sense of issues that can come up with notation. Idea of defining as a solution to an algebraic equation. Time: 40 mins.
+						</p>
+							</li>
+		
+							<li>
+											<p>
+							From numbers to powers: integers. Goal: Building definitions for <m>a^0</m> and <m>a^{-1}</m>, and other integers. Time: 20 mins.
+						</p>
+							</li>
+		
+							<li>
+											<p>
+							Building rational powers. Goal: Put together all the ideas for all rational powers. Time: 10 mins.
+						</p>
+							</li>
+		
+							<li>
+											<p>
+							Wrap up: Go over homework, summarize lesson, give teachers a chance to reflect. Time: 5 minutes.
+						</p>
+							</li>
+		
+						</ul>
+					</p>
+				</paragraphs>
+
+				<paragraphs component="instructor"><title>Length</title>
+					<p>
+						<m>\sim 3</m> hours.
+					</p>
+				</paragraphs>
+
+				<paragraphs component="instructor"><title>Materials</title>
+					<p>
+						<ul>
+						<li>
+										<p>
+						Handouts and In-Class Resources (can be printed double-sided)
+					</p>
+						</li>
+	
+						<li>
+										<p>
+						Double Sunglasses Act I video, Act III video, and Sequel video
+					</p>
+						</li>
+	
+						<li>
+										<p>
+						A means of collecting students’ responses to the teaching scenes and scenarios (Mr. Ryan, Ms. Swain, etc.) using paper, google forms, or some other method.
+					</p>
+						</li>
+	
+					</ul></p>
+				</paragraphs>
+			</introduction>
+
+			<section xml:id="sec-sunglasses"><title>Opening Inquiry: Double Sunglasses / Stacking Sunglasses</title>
+
+				<worksheet xml:id="ws-double-singlasses"><title>Activity 1 - Double Sunglasses</title>
+
+					<p>
+						This activity uses a Three Act Math Task to motivate the material in this chapter. 
+						Math Three Acts use mathematical storytelling to motivate learning. 
+						Basically, Act I is meant to activate mathematical curiosity and set up a conflict / problem to solve, Act II develops tools for solving the conflict / problem, and Act III resolves the mathematical conflict / problem and sets up a sequel! 
+						You can learn more about Dan Meyer's Three Acts at this <url href="https://blog.mrmeyer.com/2011/the-three-acts-of-a-mathematical-story/" visual="">link</url>.
+
+					</p>
+
+					<exercise>
+						<p>
+							Watch the Act I video. 
+							Use the space below to write questions that come to mind.
+						</p>
+					</exercise>
+
+					<commentary component="instructor"><title>Instructor Note</title>
+						<p>
+							Questions teachers have asked in the past include:
+							<ul>
+								<li>
+									<p>
+										What does the tint percent have to do with?
+									</p>
+								</li>
+
+								<li>
+									<p>
+										Is he trying to show that 50% plus 50% is 100% with sunglasses?
+									</p>
+								</li>
+
+								<li>
+									<p>
+										How does wearing two pairs of sunglasses change the tint present?
+									</p>
+								</li>
+
+								<li>
+									<p>
+										What did 100% tint look like?
+									</p>
+								</li>
+
+								<li>
+									<p>
+										What does 50% tint mean?
+									</p>
+								</li>
+
+								<li>
+									<p>
+										Is 0 tint no sunglasses?
+									</p>
+								</li>
+							</ul>
+						</p>
+					</commentary>
+
+					<exercise>
+						<p>
+							Act II will be presented by your instructor.
+						</p>
+
+						<p>
+							<ul>
+								<li>
+									<p>
+										You want to find out: <q>What will be the percent tint with both sunglasses?</q> What information do you need?
+									</p>
+								</li>
+
+								<li>
+									<p>
+										After exploring, commit to an answer to the following question before watching Act III.
+									</p>
+
+									<p>
+										Which is closest to the correct answer? <m>100\% \hspace{10pt} 75\% \hspace{10pt} 50\% \hspace{10pt} 25\% \hspace{10pt} 0\%</m>
+									</p>
+								</li>
+							</ul>
+						</p>
+					</exercise>
+
+					<commentary component="instructor"><title>Instructor Note</title>
+						<p>
+							Be sure the following things come out in the discussion:
+							<ul>
+								<li>
+									<p>
+										“Tint” means window tint. The higher the tint, the darker things appear.
+									</p>
+								</li>
+
+								<li>
+									<p>
+										p% tint: The sunglasses reduce visible light transmission by p%.
+									</p>
+								</li>
+
+								<li>
+									<p>
+										With 50% tint glasses, you see 50% of the light.
+									</p>
+								</li>
+
+								<li>
+									<p>
+										With 60% tint glasses, you see 40% of the light.
+									</p>
+								</li>
+							</ul>
+						</p>
+					</commentary>
+
+					<commentary component="instructor"><title>Instructor Note</title>
+						<p>
+							Be sure the following things come out in the discussion:
+							<ul>
+								<li>
+									<p>
+										“Tint” means window tint. The higher the tint, the darker things appear.
+									</p>
+								</li>
+
+								<li>
+									<p>
+										p% tint: The sunglasses reduce visible light transmission by p%.
+									</p>
+								</li>
+
+								<li>
+									<p>
+										With 50% tint glasses, you see 50% of the light.
+									</p>
+								</li>
+
+								<li>
+									<p>
+										With 60% tint glasses, you see 40% of the light.
+									</p>
+								</li>
+							</ul>
+						</p>
+					</commentary>
+
+					<exercise>
+						<p>
+							Watch the Act III video. Why does that answer make sense?
+						</p>
+					</exercise>
+
+					<exercise>
+						<p>
+							Watch the Sequel video.
+						</p>
+					</exercise>
+
+				</worksheet>
+
+				<worksheet xml:id="subsec-stacking-sunglasses"><title>Activity 2 - Stacking Sunglasses</title>
+
+					<p>
+						Based on our work so far, we can say that...
+					</p>
+
+					<table>
+						<title></title>
+						<tabular>
+							<row>
+								<cell halign="center">A Person wearing <m>\rule{1cm}{0.15mm}</m></cell>
+								<cell halign="center">Can see <m>\rule{1cm}{0.15mm}\%</m> of</cell>
+							</row>
+							<row>
+								<cell halign="center">sunglasses, each at <m>5\%</m> tint</cell>
+								<cell halign="center">the light in front of them</cell>
+							</row>
+							<row>
+								<cell halign="center">Single</cell>
+								<cell halign="center"><m>0.95 = 95\%</m></cell>
+							</row>
+							<row>
+								<cell halign="center">Quintuple</cell>
+								<cell halign="center"><m>(0.95)^5 = 77.4\%</m></cell>
+							</row>
+							<row>
+								<cell halign="center">Hextuple</cell>
+								<cell halign="center"><m>(0.95)^6 = 73.5\%</m></cell>
+							</row>
+							<row>
+								<cell halign="center">Septuple</cell>
+								<cell halign="center"><m>(0.95)^7 = 69.8\%</m></cell>
+							</row>
+						</tabular>
+					</table>
+
+					<p>
+						Using the expressions in the table, find <em>three different ways</em> to compute the answer to this question:
+					</p>
+
+					<question>
+						<p>
+							A person wears 18 sunglasses, each at 5% tint. How much of the color around them can they see?
+						</p>
+					</question>
+				</worksheet>
+				
+			</section>
+
+			<section xml:id="sec-1.3"><title>Exponential Expressions and Power Properties in Teaching</title>
+
+				<introduction>
+					<p>
+						In the sunglasses tasks, we used:
+					</p>
+		
+					<definition xml:id="def-exponential-expression"><title>Exponential Expression</title>
+						<statement>
+							<p>
+								In expressions such as <m>(0.95)^n</m>, we refer to <m>0.95</m> as the base and <m>n</m> as the exponent. 
+								The expression <m>(0.95)^n</m> is called a power.
+							</p>
+						</statement>
+					</definition>
+		
+					<p>
+						<ul>
+							<li>
+								<p>
+									This use of 'power' and 'exponent' is used in K-12 texts. It distinguishes between components of the expression and the whole expression.
+								</p>
+							</li>
+		
+							<li>
+								<p>
+									It allows us to say key properties of exponentiation more clearly, for instance: 'multiplying powers means adding exponents', 'logarithms map powers to exponents', 'exponentiation maps exponents to powers'.
+								</p>
+							</li>
+						</ul>
+					</p>
+		
+					<fact xml:id="prop-power"><title>Power Properties: Draft</title>
+						<statement>
+							<p>
+								When <m>n</m> is a positive natural number, exponential expressions satisfy the following properties:
+								<ul>
+									<li>
+														<p>
+									(1st power) <m>a^1=a</m> (take this as definition)
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									(product of powers property) <m>a^{x_1+x_2}=a^{x_2+x_1}=a^{x_1} a^{x_2}</m>
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									(power of a power property) <m>(a^{x_1})^{x_2}=(a^{x_2})^{x_1}=a^{x_1 x_2}</m>
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									(power of a product property)<m>(ab)^x=a^xb^x=b^xa^x</m>
+								</p>
+									</li>
+			
+								</ul>
+							</p>
+						</statement>
+					</fact>
+		
+					<p>
+						Note: The first three Power Properties allow us to say that exponent addition and multiplication are commutative, associative, and satisfy the distributive property.
+					</p>
+
+					<remark>
+						<p>
+							This is a rough draft for a few reasons. 
+							One is that we don't specify anything about the domains of <m>a</m>, <m>x_1</m>, <m>x_2</m>. 
+							These will come later.
+						</p>
+					</remark>
+
+					<commentary component="instructor"><title>Instructor Note</title>
+						<p>
+							Many instructors find it helpful to have students submit their responses in the next activity using Google forms or something similar—choosing the option for Google forms to e-mail the responses to the person completing the form when they hit submit. 
+							It is important to have the a record of all of these responses. 
+							Later activities will ask the teachers to revisit their responses to these questions.
+						</p>
+					</commentary>
+				</introduction>
+
+				<worksheet xml:id="subsec-expressions-1"><title>Activity 3 — Exponential Expressions and Power Properties in Teaching, Part 1</title>
+
+					<p>
+						Mathematics teachers find themselves in teaching situations where they must speak about powers and exponents in many different ways. This activity will give you an opportunity to reflect on these sorts of situations.
+					</p>
+
+					<p>
+						Classroom Scenario: Mr. Ryan teaches everything from Pre-Algebra to Calculus. The following two scenes are snapshots from his classes at different times during the year.
+					</p>
+
+					<sidebyside>
+						<image source='01_scene1.jpg'/>
+
+						<image source='01_scene2.jpg'/>
+					</sidebyside>
+
+					<p>
+						Read the scenario aloud with a partner. What are some initial thoughts you have?
+					</p>
+					
+				</worksheet>
+
+				<worksheet xml:id="subsec-expressions-2"><title>Activity 3 — Exponential Expressions and Power Properties in Teaching, Part 2</title>
+
+					<p>
+						Write down your thoughts on the following questions and save them. We will come back to these.
+					</p>
+
+					<question>
+						<p>
+							How would you evaluate the pedagogical quality of these two explanations: (a) about exponentiation and (b) about taking derivatives?
+						</p>
+					</question>
+
+					<question>
+						<p>
+							If your evaluation depends on the context of the statement, provide some sense of why and when your evaluation might change.
+						</p>
+					</question>
+
+					<commentary component="instructor"><title>Instructor note</title>
+						<p>
+							Give teachers a moment to read the task. 
+							Ask teachers what questions they have about what they are asked to think about. 
+							Say: 'Remember, this is about the EXPLANATION, not the rule.' 
+							Ask again whether there are questions. 
+							Then give teachers some time to write their thoughts (and possibly submit to you via a google form or chat or something like this.) 
+							We will revisit this question later. 
+							For reference for you, this explanation works when <m>x_1</m> and <m>x_2</m> are <m>\N</m> (if we can make sense of ”<m>0</m>” copies), but not so well for any other number system.
+						</p>
+					</commentary>
+					
+				</worksheet>
+
+				<worksheet xml:id="subsec-expressions-3"><title>Activity 3 — Exponential Expressions and Power Properties in Teaching, Part 3</title>		
+					<p>
+						Now, we consider an additional explanation. Here is one for the power of power property:
+					</p>
+
+					<blockquote>
+											<p>
+						“Let's think about <m>(b^{x_1})^{x_2}=b^{x_1x_2}</m> with a specific example. Take <m>(2^3)^5)</m>
+					</p>
+
+					<p>
+						<m>(2^3)^5)</m> is five copies of <m>(2^3)</m>
+					</p>
+
+					<p>
+						<m>(2^3)^5=(2^3)(2^3)(2^3)(2^3)(2^3)</m>
+					</p>
+
+					<p>
+						So, the rule above says that this just equals <m>2^{3+3+3+3+3}=2^{3\times5}</m>.”
+					</p>
+					</blockquote>
+
+					<p>
+						What numbers and/or number sets does  work for? Circle what works
+					</p>
+
+					<p>
+						This explanation works when <m>x_1</m> is: <m>0 \hskip10pt -1 \hskip10pt 1/3 \hskip10pt \mathbb{N}\hskip10pt \mathbb{Z}\hskip10pt \mathbb{Q}\hskip10pt \mathbb{R}</m>
+					</p>
+
+					<p>
+						This explanation works when <m>x_2</m> is: <m>0 \hskip10pt -1 \hskip10pt 1/3 \hskip10pt \mathbb{N}\hskip10pt \mathbb{Z}\hskip10pt \mathbb{Q}\hskip10pt \mathbb{R}</m>
+					</p>
+
+					<p>
+						This explanation works when <m>b</m> is: <m>0 \hskip10pt -1 \hskip10pt 1/3 \hskip10pt \mathbb{N}\hskip10pt \mathbb{Z}\hskip10pt \mathbb{Q}\hskip10pt \mathbb{R}</m>
+					</p>
+
+					<p>
+						Let's return to Mr. Ryan and the context for the two scenes we saw earlier.
+					</p>
+
+					<p><ul>
+						<li>
+											<p>
+						<em>Scene 1</em> was from when the class was studying the graphs of exponential functions, more specifically, <m>y=3^x</m>. As students were plugging in values to find specific points on the graph, Mr. Ryan said, “Remember, exponents just mean repeated multiplication. Like when <m>x=4, 3^4</m> means <m>3</m> multiplied by itself four times."
+					</p>
+						</li>
+
+						<li>
+											<p>
+						<em>Scene 2</em> was from when his Calculus class was having an end-of-year review about some of the most important ideas and results about derivatives: “If you see a function with an exponent, like <m>f(x)=2x^3</m> to take the derivative, you bring down the exponent to the front and subtract one from the exponent."
+					</p>
+						</li>
+
+					</ul></p>
+
+				</worksheet>
+
+				<worksheet xml:id="subsec-expressions-4"><title>Activity 3 — Exponential Expressions and Power Properties in Teaching, Part 4</title>
+
+					<question>
+						<p>
+							Given these contexts, give Mr. Ryan feedback about his explanations: What applies well? What could help students think more generally?
+						</p>
+					</question>
+
+					<p>
+						Mr. Ryan asked students to submit questions to him for homework. Some students emailed him these questions. He asks you for your ideas to respond.
+					</p>
+
+					<question>
+						<p>
+							One student asks: <q>Hey Mr. R, Here's my question. Why do <m>\sqrt a</m> and <m>a^{(1/2)}</m> mean the same thing? If it's a square root, why does it have to be <m>a^{(1/2)}</m> and not <m>a^{(-2)}</m> or <m>a^2</m> or something else with <m>2</m>?</q><!-- linebreak -->What ideas do you have for how Mr. Ryan should respond?
+						</p>
+					</question>
+
+					<question>
+						<p>
+							A second student asks: <q>Yo Mr. R, are <m>-(3^x)</m> and <m>(-3)^x</m> the same thing? They seem like they should be different, but they also seem like they should the same.</q><!-- linebreak -->What ideas do you have for how Mr. Ryan should respond?
+						</p>
+					</question>
+					
+				</worksheet>
+
+				<conclusion>
+					<p>
+						So far in this module, we:
+						<ol>
+							<li>
+								<p>
+									Identified Exponential Expressions and Power Properties
+								</p>
+							</li>
+
+							<li>
+								<p>
+									Saw how these things can be used in rich problems (e.g. Double Sunglasses)
+								</p>
+							</li>
+
+							<li>
+								<p>
+									Thought about how explanations generalize, and what might be tricky to explain
+								</p>
+							</li>
+						</ol>
+					</p>
+
+					<p>
+						Be sure to save your your explanations and responses from the above activity. We will revisit them later, after a few more activities.
+					</p>	
+				</conclusion>
+
+			</section>
+
+			<section xml:id="sec-1.4"><title>Positive Natural Powers</title>
+
+				<introduction>
+					<p>
+						In this section, we further explore explaining power properties—providing opportunities for teachers to give explanations that build on ideas that students learn before high school. Mathematicians often provide explanations by way of analogy, and we use this tactic repeatedly in the remainder of this chapter. We make explicit the structure of multiplication as repeated addition, and leverage the analogous structure of exponentiation as repeated multiplication.
+					</p>
+				</introduction>
+
+				<worksheet xml:id="subsec-4"><title>Activity 4 — From Numbers to Powers: Positive Natural Numbers</title>
+
+					<commentary component="instructor"><title>Instructor note</title>
+						<p>
+							If you have shared whiteboard space, this is a good activity for teachers to work with each other on the whiteboard. 
+							Distribute additional paper for teachers to record their work for this activity. 
+							(There isn't enough room on the worksheet as is.)
+						</p>
+					</commentary>
+
+					<p>
+						In this activity and the ones to follow, we explore different types of numbers, and how multiplication and exponentiation behave for those number types. We start with positive natural numbers.
+					</p>
+
+					<definition xml:id="def-">
+						<statement>
+							<p>
+								When <m>n \in \mathbb{N}^+</m>, we define 
+								<me>
+									a^n=\underbrace{a\cdot a\cdot\dots \cdot a}_{n\ times}
+								</me> 
+								with repeated multiplication by <m>a</m>.
+							</p>
+						</statement>
+					</definition>
+
+					<p>
+						To see why the power properties hold for positive natural powers, we can make an analogy to familiar properties of multiplication of positive natural numbers. We will make graphical summaries of possible explanations based on the analogous structures we notice.
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image source="01_1_Mult_expn_natural.jpg"/>					
+					</figure>
+
+					<commentary component="instructor"><title>Instructor Note</title>
+						<p>
+							Walk through chart together. 
+							Say that although these are things that may be familiar, we are going over them so we are all on the same page with each other. 
+							As well, this way of organizing our thoughts will be useful when we get to other kinds of powers. 
+							Be sure that teachers notice how representations of addition and multiplication map to analogous representations of multiplication and exponentiation respectively. 
+							Namely, pictures representing ones as boxes and repeated addition map nicely to the as and repeated multiplication.
+						</p>
+					</commentary>
+
+					<question>
+						<p>
+							Your turn! In the space below, create two visual displays:
+							<ol>
+								<li>
+													<p>
+								One visual for explaining the distributive property
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								A second visual for explaining the power of product property
+							</p>
+								</li>
+		
+							</ol>
+						</p>
+					</question>
+
+					<commentary component="instructor"><title>Instructor Note</title>
+						<p>
+							Have teachers complete in pairs or groups. 
+							Then, choose a couple of teacher groups to share their visuals. 
+							Then, ask the class, “Choose the one most different from your own and come up with a 1-minute-or-less oral explanation using that visual. 
+							Talk it aloud to yourself.” 
+							Students may have a difficult time creating a visual, but don't let this bog down progress too much. 
+							If no student group has a suitable visual for discussion, utilize the one in the oral task below, or something similar that you create (e.g. a representation of <m>5(2 + 3)</m> compared to <m>(2 \times 3)5)</m>.
+						</p>
+					</commentary>
+					
+				</worksheet>
+
+				<conclusion>
+
+					<p>
+						After completing the activities in this section, we saw a few things. First, making a chart of definitions and visual representations for multiplication and exponentiation along with their properties can be useful for organizing our thinking. 
+						Second, explanations for powers and properties can be patterned after ones that students saw in middle school.
+					</p>
+
+					<p>
+						In the next section, we will make charts for other number systems in the order: <m>\mathbb{Q}^+</m>, <m>\mathbb{Z}</m>, <m>\mathbb{Q}</m>, and <m>\mathbb{R}</m>.
+					</p>
+
+					<p>
+						We will proceed by:
+						<ul>
+							<li>
+												<p>
+							Defining numbers in that system
+						</p>
+							</li>
+
+							<li>
+												<p>
+							Defining powers with exponents in that system
+						</p>
+							</li>
+
+							<li>
+												<p>
+							Explaining multiplication properties
+						</p>
+							</li>
+
+							<li>
+												<p>
+							Explaining power properties
+						</p>
+							</li>
+
+						</ul>
+					</p>
+
+
+				</conclusion>
+
+				
+				
+			</section>
+
+			<section xml:id="sec-1.5"><title>Positive Rational Powers</title>
+
+				<worksheet xml:id="subsec-5"><title>Activity 5—Number Line: Locating Numbers</title>
+
+					<commentary component="instructor"><title>Instructor Note</title>
+						<p>
+							For this number line activity, teachers can work from a shared number line and have members of the class come to the board and point, pass out laser pointers to have students point, have students point using their cursor location on a shared google doc, or use a non-shared number line and have everyone point on different pieces of paper in their groups.
+						</p>
+					</commentary>
+
+					<p>
+						In this activity, we carefully explore how we talk about numbers. We do so by considering the numberline below:
+					</p>
+
+					<image source="01_num_line.JPG"/>
+
+					<p>
+						Indicate your answers to the following questions by pointing.
+					</p>
+
+					<question>
+						<p>
+							Where is 5? How do you know this is where it is?
+						</p>
+					</question>
+
+					<question>
+						<p>
+							Where is <m>-3</m>? How do you know this is where it is?
+						</p>
+					</question>
+
+					<question>
+						<p>
+							Where is <m>1/3</m>? How do you know this is where it is?
+						</p>
+					</question>
+
+					<question>
+						<p>
+							Where is <m>7/3</m>? How do you know this is where it is?
+						</p>
+					</question>
+
+					<p>
+						Let's dig a little deeper on answers to Q3 and Q4.
+					</p>
+
+					<question>
+						<p>
+							How many solutions are there to <m>3x=1</m>? How do you know?
+						</p>
+					</question>
+
+					<question>
+						<p>
+							What are some different ways to explain <m>7/3</m>?
+						</p>
+					</question>
+
+					<commentary component="instructor">
+						<p>
+							Stress to teachers that they know some or all of these things already, and these may not be how they personally think about them. That's okay! The point is that we are expanding the ways we think about concepts, so that teachers have more ways to explain things to students, and more ways to connect mathematical concepts!
+						</p>
+					</commentary>
+					
+				</worksheet>
+
+				<subsection xml:id="subsec-defs">
+					<title></title>
+
+					<p>
+						Based on our progress in the previous activity, we are now ready for the following definition.
+					</p>
+
+					<definition xml:id="def-natual-line">
+						<statement>
+							<p>
+								Any natural number <m>n</m> can be thought of as location and movement, where, given an origin <m>0</m> and a unit distance <m>1</m> on the number line,
+							</p>
+
+							<p><ul>
+								<li>
+													<p>
+								<q><m>0</m></q> is the movement of staying still, and its location is the origin.
+							</p>
+								</li>
+
+								<li>
+													<p>
+								<q><m>1</m></q> is the movement of translating <m>1</m> unit to the right, and the location of moving <m>1</m> unit to the right when starting from <m>0</m>.
+							</p>
+								</li>
+
+								<li>
+													<p>
+								<q><m>n</m></q>, for <m>n&gt;0</m>, is the movement of <m>n</m> repeated translations of <m>1</m>, and the location of moving <m>n</m> units to the right when starting from <m>0</m>.
+							</p>
+								</li>
+
+							</ul></p>
+
+							<p>
+								A rational number <m>p/q</m>, where <m>p,q\in \mathbb{N}</m> and <m>q\neq 0</m>, can be thought of as location and movement as follows:
+							</p>
+
+							<p><ul>
+								<li>
+													<p>
+								<m>1/q</m> is the movement that you need to take <m>q</m> times to get from <m>0</m> to <m>1</m>; in other words, it is a solution to the equation <m>qx=1</m>. It is the location you get by moving this much to the right when starting from <m>0</m>.
+							</p>
+								</li>
+
+								<li>
+													<p>
+								<m>p/q</m> is the movement of <m>p</m> repeated translations of <m>1/q</m>, and the location of moving this much to the right when starting from <m>0</m>.
+							</p>
+								</li>
+
+							</ul></p>
+						</statement>
+					</definition>
+
+					<p>
+						With this definition in hand, we can see how it has power to inform the way we define and explain multiplication, exponentiation, and their properties when using positive rationals.
+					</p>
+					
+				</subsection>
+
+				<worksheet xml:id="subsec-6"><title>Activity 6—Positive Rationals</title>
+
+					<question>
+						<p>
+							Explain how this chart conveys <em>definitions</em> of multiplication and exponentiation with positive rational numbers. 
+						</p>
+					</question>
+
+					<image source="01_1_Mult_expn_ratl_pos.jpg"/>
+
+					<question>
+						<statement>
+						<p>
+							Because we think of positive rational powers as solutions to equations, consider:
+						</p>
+
+						<p><ul>
+							<li>
+												<p>
+							How many solutions are there for <m>x</m> in the equation <m>x^2=1</m>?
+						</p>
+							</li>
+
+							<li>
+												<p>
+							How many solutions are there for <m>x</m> in the equation <m>x^3=1</m>?
+						</p>
+							</li>
+
+							<li>
+												<p>
+							How many solutions are there for <m>x</m> in the equation <m>x^q=1</m> where <m>q</m> is a natural number?
+						</p>
+							</li>
+
+						</ul></p>
+						</statement>
+
+						<hint>
+							<p>
+								Use this question to motivate the definition of the <m>q\th</m>root notation as designating only the POSITIVE roots
+							</p>
+						</hint>
+					</question>
+
+					<question>
+						<statement>
+							<p>
+								How does our above thinking help us to explain what <m>10^{1/3}</m> is. Explain. Also, without the use of a calculator, explain where would you place it on the number line?
+							</p>
+						</statement>
+						<hint>
+							<p>
+								Use this question to motivate the <m>10^{1/3}</m> as the solution to the equation <m>x^{1/3} = 10</m>. 
+								Be sure to mention that we call this the positive third root of <m>10</m>. 
+							</p>
+						</hint>
+					</question>
+					
+				</worksheet>
+
+				<subsection xml:id="subsec-defs-1"><title></title>
+
+					<p>
+						We are now ready for the following definitions:
+					</p>
+
+					<definition xml:id="def-rational-powers"><title>Rational Powers: Draft</title>
+						<statement>
+							<p>
+								When <m>p/q \in \mathbb{Q}^+</m>, where <m>p, q \in \mathbb{N}^+</m>, we define
+								<ul>
+									<li>
+														<p>
+									<m>a^{1/q}</m> as the positive number that you multiply <m>q</m> times to get <m>a</m>.<!-- linebreak -->Equivalently, it is a positive or zero solution to <m>x^q=a</m>. This is also known as a .
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									<m>a^{p/q}</m> as <m>(a^{1/q})^p</m>, which we take to be equivalent to <m>(a^p)^{1/q}</m>.
+								</p>
+									</li>
+			
+								</ul>
+							</p>
+						</statement>
+					</definition>
+
+					<p>
+						Note: Such a solution, when it does exist, is unique. When such a solution does not exist, we say that the <m>1/q</m>-th power does not exist.
+					</p>
+
+					<definition xml:id="def-qth-root"><title><m>q</m>-th root: Draft</title>
+						<statement>
+							<p>
+								The notation <m>\sqrt[q]{a}</m> means a positive or zero <m>q</m>-th root of <m>a</m>, so it is another way to write <m>a^{1/q}</m>. These notations mean the same thing.
+							</p>
+						</statement>
+					</definition>
+
+					<!--INSTRUCTOR NOTE HERE-->
+						
+					<p>
+						Historically, exponential notation <m>a^x</m> was used for natural number exponents. Euclid used the term <q>power</q> to mean the square of a line segment, and Archimedes used the idea of powers to work with base 10 arithmetic. Radical notation <m>\sqrt[q]{a}</m> used for square roots, cube roots, etc. Eventually, some mathematicians realized they could unify the notation, using power properties. A <m>q</m>-th root of <m>a</m>, by definition, is a solution to <m>x^q=a</m>. Therefore, applying power properties to the notation <m>a^{1/q}</m> yields <m>(a^{1/q})^q=a^{\frac{1}{q}\cdot q}=a^1 =a</m>.
+					</p>
+
+					<p>
+						Thus power properties are used to create the definition of positive rational number powers. At the same, we can also explain why these properties should hold for positive rational number powers, in analogy to properties of multiplication of positive rational numbers. The following is a graphical summary of a possible explanation of one property. Other properties hold as well, though their graphics are a bit messier.
+					</p>
+					
+				</subsection>
+
+				<worksheet xml:id="subsec-7-1"><title>Activity 7 — Positive Rationals in Teaching, Part 1</title>
+
+					<p>
+						Explain how this chart conveys <em>properties</em> of multiplication and exponentiation with positive rational numbers.
+					</p>
+					
+					<image source="01_Mult_expn_ratl_pos.jpg"/>
+											
+				</worksheet>
+
+				<worksheet xml:id="subsec-7-2"><title>Activity 7 — Positive Rationals in Teaching, Part 2</title>
+
+					<commentary component="instructor">
+						<p>
+							Be sure to provide time for teachers to discuss their answers to each of these question parts, while some of the questions in the activities can be moved along by the instructor, it is important for students to share their thinking on this question. Give teachers some time to write their thoughts (and possibly submit to you via a google form or some other means.)
+						</p>
+					</commentary>
+
+					<p>
+						Suppose you are teaching about rational powers. Think about each of the below ideas and write down your thoughts on how to respond.
+					</p>
+
+					<question>
+						<statement>
+							<p>
+								You ask students the question "Where is <m>(\sqrt[6]{27})^2</m> on the number line?"
+							</p>
+
+							<p>
+								What are three different strategies that students might understand and use to figure out this problem?
+							</p>
+						</statement>
+						<solution>
+							<p>
+								Teachers will see this in a number of ways, and some may not see it. 
+								For example, one teacher responded,
+								“a6 = 27 and 33 = 27, so a ∗ a ∗ a ∗ a ∗ a ∗ a = 27 and 3 ∗ 3 ∗ 3 = 27, so I can combine the a's to a2 ∗ a2 ∗ a2 = 27, so a2 must be 3. So the 6th root of 27 squared is 3.”
+								Another teacher said, “They may also change the sixth root of 27 to be 271/6, and then if they know that a
+								power raised to a power is the two numbers multiplied, they can recognize this will be 271/3 which is then 3.”
+							</p>
+						</solution>
+					</question>
+
+					<question>
+						<statement>
+							<p>
+								You assign this problem to your students:
+							</p>
+
+							<p>
+								"Which of the following shows a cube root of 100,000? Circle them. 
+								<me>
+									(\sqrt[3]{10})^5 \hspace*{30pt} 10^{3/5} \hspace*{30pt} \sqrt[3]{10^5}  \hspace*{30pt} 10^{15}  \hspace*{30pt} (100,000)^{1/3}  \hspace*{30pt} 100
+								</me> 
+								Also, what are other ways to right the same number?"
+							</p>
+
+							<p>
+								First, solve the problem. Then write down different ways you can explain the first part (i.e., the circle the answers part).
+							</p>
+						</statement>
+						<solution>
+							<p>
+								We can test whether a number is a cube root by taking their third power. That is, for this problem, seeing if they are a solution to x3 = 100, 000
+							</p>
+						</solution>
+					</question>
+
+					<question>
+						<statement>
+							<p>
+								A student asks "What if you wrote other numbers for the root? Like, if you wrote <m>\sqrt[-3]{27}</m> or <m>\sqrt[1/3]{27}</m>, what would these mean?"<!-- linebreak -->What are reasonable values for these? Why?
+							</p>
+						</statement>
+						<solution>
+							<p>
+								Possible answers: Some teachers may suggest: 3
+	√x means x1/3, and y
+	√x means x1/y in general. So 1/3
+	√27 means
+	273, which 19, 683. So −3
+	√27 means 27−1/3 which is 1/3.
+							</p>
+						</solution>
+					</question>
+					
+				</worksheet>
+				
+			</section>
+
+			<section xml:id="sec-1.6"><title>Integer Powers</title>
+
+				<worksheet xml:id="subsec-8"><title>Activity 8—Integer Powers</title>
+					
+					<p>
+						We now turn to thinking of integer powers that are not positive. The case of 0 and <m>-1</m> often pique students' curiosity, as the following scenario depicts.
+					</p>
+
+					<!--INSTRUCTOR NOTE HERE-->
+
+					<question>
+						<statement>
+							<p>
+								In Ms. Swain's Algebra I class, a student says: "I don't know why <m>x^0=1</m>. Is it just because someone said so? Like a convention? To me, it seems like it should be 0 because anything times 0 is 0."
+							</p>
+
+							<p>
+								What could Ms. Swain say to address these ideas?
+							</p>
+						</statement>
+						<solution>
+							<p>
+								
+							</p>
+						</solution>
+					</question>
+
+					<question>
+						<statement>
+							<p>
+								Later, a student asks: "So if <m>a^3</m> is repeated multiplication, can we think of <m>a^{-3}</m> like repeated division? Then <m>a^{-3}</m> would be a divided by a divided by a. So for 10, then <m>10^{-3}</m> would be 10 divided by 10 divided by 10 which is <m>1/10</m>."
+							</p>
+
+							<p>
+								What could Ms. Swain say to address these ideas?
+							</p>
+						</statement>
+						<solution>
+							<p>
+								
+							</p>
+						</solution>
+					</question>
+
+					<question>
+						<statement>
+							<p>
+								How do conversations similar to those in Ms. Swain's Algebra I class reveal the parallel between multiplication and exponentiation with integers and natural numbers as summarized in the table below?
+							</p>
+
+							<tabular>
+								<row>
+									<cell></cell>
+									<cell>Multiplication by <m>\pm \mathbb{N}</m></cell>
+									<cell>Exponentiation <m>a^{\pm \mathbb{N}}</m></cell>
+								</row>
+
+								<row>
+									<cell>Definition</cell>
+									<cell>Repeated addition/subtraction starting from <m>0</m></cell>
+									<cell>Repeated multiplication/division starting from <m>1</m></cell>
+								</row>
+
+								<row>
+									<cell>Notes</cell>
+									<cell><m>0</m> is the additive identity; <m>0+</m>something <m>=</m> something</cell>
+									<cell><m>1</m> is the multiplicative identity; <m>1\times</m> something <m>=</m> something</cell>
+								</row>
+							</tabular>
+						</statement>
+						<solution>
+							<p>
+								
+							</p>
+						</solution>
+					</question>
+
+					<question>
+						<statement>
+							<p>
+								Take out your responses to the questions that Mr. Ryan's students asked in their <q>homework</q> (Activity 3 Questions 7 and 8). Revisit your responses. Based on our discussion so far, take a moment to make any changes that seem appropriate, or to write more about why your initial reasoning holds.
+							</p>
+						</statement>
+						<solution>
+							<p>
+								
+							</p>
+						</solution>
+					</question>
+
+					<commentary component="instructor">
+						<p>
+							Ask teachers to share their thoughts on this. Post some themes that come up. These might include:
+							<ul>
+								<li>
+									<p>
+										Using definitions to explain. 
+										For example, to decide whether x is a cube root of a, we took x3 and see whether we got a
+									</p>
+								</li>
+
+								<li>
+									<p>
+										Extending notation using algebraic properties and by analogy.
+									</p>
+								</li>
+							</ul>
+						</p>
+					</commentary>
+
+				</worksheet>
+
+				<subsection xml:id="subsec-defs-2"><title></title>
+
+					<definition xml:id="def-negative-add">
+						<statement>
+							<p>
+								An integer <m>\pm n</m>, where <m>n\in \mathbb{N}</m>, can be thought of as location and movement, where, given an origin <m>0</m> and a unit distance <m>1</m> on the number line,
+						</p>
+
+						<p><ul>
+							<li>
+												<p>
+							<q><m>0</m></q> is the movement of staying still, and its location is the origin. So <m>0</m> is the , for <m>x+0=0</m> for any <m>x\in \mathbb{Z}</m>.
+						</p>
+							</li>
+
+							<li>
+												<p>
+							<q><m>1</m></q> is the movement of translating <m>1</m> unit to the right, and the location of moving <m>1</m> unit to the right when starting from <m>0</m>.
+						</p>
+							</li>
+
+							<li>
+												<p>
+							<q><m>-1</m></q> is the movement of translating <m>1</m> unit to the left, and moving this much when starting from <m>0</m>. It is also the solution to <m>x+1=0</m>, and so is the .
+						</p>
+							</li>
+
+							<li>
+												<p>
+							<q><m>n</m></q>, for <m>n&gt;0</m>, is the movement of <m>n</m> repeated translations of <m>1</m>, and the location of moving <m>n</m> units to the right when starting from <m>0</m>.
+						</p>
+							</li>
+
+							<li>
+												<p>
+							<q><m>-n</m></q>, for <m>n&gt;0</m>, is the movement of <m>n</m> repeated translations of <m>-1</m>, and the location of moving <m>n</m> units to the left when starting from <m>0</m>. It is also the solution to <m>x+n=0</m>, and so is the .
+						</p>
+							</li>
+
+						</ul>
+							</p>
+						</statement>
+					</definition>
+
+					<p>
+						Analogously,
+					</p>
+
+					<definition xml:id="def-negative-mult">
+						<statement>
+							<p>
+								We define, for <m>n\in \mathbb{Z}</m>,
+						</p>
+
+						<p><ul>
+							<li>
+												<p>
+							<m>a^0</m> is the , so <m>a^0a^x=a^x</m> for any <m>x</m>. This means <m>a^0=1</m>.
+						</p>
+							</li>
+
+							<li>
+												<p>
+							<m>a^{-1}</m> as a positive or zero solution to <m>ax=1</m>. This means <m>a^{-1}=\frac{1}{a}</m>, for <m>a\neq 0</m>.
+						</p>
+							</li>
+
+							<li>
+												<p>
+							<m>a^{-n}</m> as a positive or zero solution to <m>a^n x=1</m>. This means <m>a^{-n}=\frac{1}{a^n}</m>, or equivalently, <m>(\frac{1}{a})^n</m>, for <m>a\neq 0</m>.
+						</p>
+							</li>
+
+						</ul></p>
+
+						<p>
+							Note: Such solutions, when they exist, are unique. When such a solution does not exist, we say that the value of the power does not exist.
+						</p>
+						</statement>
+					</definition>
+
+
+					<p>
+						Note that another way to extend the analogy, for <m>n\in \mathbb{N}</m>, is as follows:
+					</p>
+
+					<p><ul>
+						<li>
+											<p>
+						<m>-n</m> can be thought of repeated subtraction by <m>1</m>, starting from the additive identity <m>0</m>.
+					</p>
+						</li>
+
+						<li>
+											<p>
+						<m>a^{-n}</m> can be thought of as repeated division by <m>a</m>, starting from the multiplicative identity <m>1</m>.
+					</p>
+						</li>
+
+					</ul>
+						</p>
+
+					<p>
+						Here is a graphical summary:
+					</p>
+
+					<image source="01_Mult_expn_integer.jpg"/>
+
+					<p>
+						The power properties can be shown in analogy to properties of multiplication and addition; however, the proofs get very nitty gritty, so we do not go into them.
+					</p>
+					
+				</subsection>
+				
+			</section>
+
+			<section xml:id="sec-1.7"><title>Positive and Negative Rational Powers</title>
+
+				<worksheet xml:id="subsec-9"><title>Activity 9 — Putting together definitions and properties</title>
+
+					<p>
+						Let's think more about what our progress thus far means when considering all types of possible rational number powers. The only case we have left to consider are the negative rationals.
+					</p>
+
+					<question>
+						<statement>
+							<p>
+								Which equations do <m>10^{-1/3}</m> solve? How do you know?
+								<ol>
+									<li>
+										<p>
+											<m>x^3 = 10</m>
+										</p>
+									</li>
+
+									<li>
+										<p>
+											<m>x^{-3} = 10</m>
+										</p>
+									</li>
+
+									<li>
+										<p>
+											<m>1/(x^3) = 10</m>
+										</p>
+									</li>
+
+									<li>
+										<p>
+											<m>(1/x)^3 = 10</m>
+										</p>
+									</li>
+
+									<li>
+										<p>
+											<m>(-x)^3 = 10</m>
+										</p>
+									</li>
+
+									<li>
+										<p>
+											<m>-(x^3) = 10</m>
+										</p>
+									</li>
+								</ol>
+							</p>
+						</statement>
+					</question>
+
+					<question>
+						<statement>
+							<p>
+								Which equations do <m>10^{-2/3}</m> solve? How do you know?
+								<ol>
+									<li>
+										<p>
+											<m>x^3 = 10^{-2}</m>
+										</p>
+									</li>
+
+									<li>
+										<p>
+											<m>x^{-3} = 10^{2}</m>
+										</p>
+									</li>
+
+									<li>
+										<p>
+											<m>1/(x^3) = 10^{-2}</m>
+										</p>
+									</li>
+
+									<li>
+										<p>
+											<m>(1/x)^3 = 10^{2}</m>
+										</p>
+									</li>
+
+									<li>
+										<p>
+											<m>x^{3/2} = 10</m>
+										</p>
+									</li>
+								</ol>
+								
+							</p>
+						</statement>
+						
+					</question>
+
+					<!--SPEECH BUBBLE-->
+
+					<p>
+						<em>Back to Mr. Ryan's class</em>. Take out your responses to Activity 3, Part 3. Revisit your answers for <m>x_1</m> and <m>x_2</m>. Remember these are about the <em>explanation</em>, rather than the rule.
+					</p>
+
+					<question>
+						<statement>
+							<p>
+								Do you still agree with yourself? 
+								Are you uncertain for any?
+							</p>
+						</statement>
+					</question>
+
+					<question>
+						<statement>
+							<p>
+								Revisit your responses. 
+								Based on our discussion so far, take a moment to make any changes that seem appropriate, or to write more about why your initial reasoning holds.
+							</p>
+						</statement>
+					</question>
+
+					<!--SPEECH BUBBLE-->
+
+					<!--INSTRUCTOR NOTE HERE-->
+					
+				</worksheet>
+
+				<subsection xml:id="subsec-defs-4"><title></title>
+
+					<p>
+						To finish defining rational powers, we need to define negative rational powers. We use the same idea as previously for negative integers, namely, to define in analogy to additive inverses.
+					</p>
+
+					<definition xml:id="def-neg-rat-powers"><title>Negative Rational Powers: Draft</title>
+						<statement>
+							<p>
+								We define, for <m>-p/q\in \mathbb{Q}</m>, where <m>p, q\in \mathbb{N}</m>, and <m>q\neq 0</m>,
+								<ul>
+									<li>
+														<p>
+									<m>a^{-1/q}</m> as a positive or zero solution to <m>a^{1/q} x=1</m>. This means <m>a^{-1/q}=\frac{1}{a^{1/q}}</m>, or equivalently, <m>(\frac{1}{a})^{1/q}</m>, for <m>a\neq 0</m>.
+								</p>
+									</li>
+			
+								</ul>
+							</p>
+						</statement>
+					</definition>
+
+					<p>
+						Note: Such solutions, when they exist, are unique. When such a solution does not exist, we say that the value of the power does not exist.
+					</p>
+					
+				</subsection>
+
+				<outcomes>
+					<ul>
+						<li>
+							<p>
+								When <m>n \in \mathbb{N}^+</m>, we define:
+								<ul>
+									<li>
+														<p>
+									<m>a^n=\underbrace{a\cdot a\cdot\dots \cdot a}_{n\ times}</m> as repeated multiplication by <m>a</m>.
+								</p>
+									</li>
+			
+								</ul>
+							</p>
+						</li>
+
+						<li>
+							<p>
+								When <m>-n\in \mathbb{Z}</m>, (so <m>n\in \mathbb{N}</m>),
+								<ul>
+									<li>
+														<p>
+									<m>a^0</m> is the , so <m>a^0a^x=a^x</m> for any <m>x</m>. This means <m>a^0=1</m>.
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									<m>a^{-1}</m> as a positive or zero solution to <m>ax=1</m>. This means <m>a^{-1}=\frac{1}{a}</m>, for <m>a\neq 0</m>.
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									<m>a^{-n}</m> as a positive or zero solution to <m>a^n x=1</m>. This means <m>a^{-n}=\frac{1}{a^n}</m>, or equivalently, <m>(\frac{1}{a})^n</m>, for <m>a\neq 0</m>.
+								</p>
+									</li>
+			
+								</ul>
+							</p>
+						</li>
+
+						<li>
+							<p>
+								When <m>p/q \in \mathbb{Q}^+</m>, where <m>p, q \in \mathbb{N}^+</m>, we define
+								<ul>
+									<li>
+														<p>
+									<m>a^{1/q}</m> as a positive or zero solution to <m>x^q=a</m>. This is also known as a .
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									<m>a^{p/q}=(a^{1/q})^p</m>, which we take to be equivalent to <m>(a^p)^{1/q}</m>.
+								</p>
+									</li>
+			
+								</ul>
+							</p>
+						</li>
+
+						<li>
+							<p>
+								When <m>-p/q\in \mathbb{Q}</m>, where <m>p, q\in \mathbb{N}</m>, and <m>q\neq 0</m>,
+								<ul>
+									<li>
+														<p>
+									<m>a^{-1/q}</m> as a positive or zero solution to <m>a^{1/q} x=1</m>. This means <m>a^{-1/q}=\frac{1}{a^{1/q}}</m>, or equivalently, <m>(\frac{1}{a})^{1/q}</m>, for <m>a\neq 0</m>.
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									<m>a^{-p/q}=(a^{-1})^{p/q}</m>, which we take to be equivalent to <m>(a^{p/q})^{-1}</m>
+								</p>
+									</li>
+			
+								</ul>
+							</p>
+
+							<p>
+								Note: Such solutions, when they exist, are unique. When such a solution does not exist, we say that the value of the power does not exist.
+							</p>
+						</li>
+					</ul>
+				</outcomes>
+
+				<conclusion>
+					<p>
+						What we have not done so far includes:
+						<ul>
+							<li>
+												<p>
+							Discussing the possible values for the base <m>a</m>
+						</p>
+							</li>
+
+							<li>
+												<p>
+							Whether there are values where we will run into any trouble
+						</p>
+							</li>
+
+							<li>
+												<p>
+							Real powers.
+						</p>
+							</li>
+
+						</ul>
+						The homework will prepare you for discussing these, which we do next, in Section <xref ref="ch-ii" />.
+					</p>
+				</conclusion>
+				
+			</section>
+
+			<exercises>
+
+				<exercise>
+					<statement>
+						<p>
+							Read Chapters 1-2 of <em>Radical Equations: Civil Rights from Mississippi to the Algebra Project</em> . Do some google or other searching on terms that you have not seen before, as well as on the author of the book, Robert (Bob) Moses. Think about and be ready to discuss:
+							<ul>
+								<li>
+													<p>
+								Who is Bob Moses?
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								What is the Algebra Project?
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								What does Bob Moses believe that Algebra and Civil Rights are tied together, especially for Blacks, Hispanic, and poor White populations?
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								How does the subway system give rise to talking about numbers, and what was Bob Moses' goal in doing these activities and discussions?
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								What lessons do you want to remember from this reading?
+							</p>
+								</li>
+		
+							</ul>
+						</p>
+					</statement>
+				</exercise>
+
+				<exercise>
+					<statement>
+						<p>
+							Something we discussed in this section is explaining numbers using location and movement. Some middle school teachers have found it fun and helpful to visualize the movement as skateboarding and to think about recording someone skateboarding. Here:
+							<ul>
+								<li>
+													<p>
+								<m>1</m> is like a video of someone skateboarding forward from <m>1</m> unit.
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								<m>n</m> is like a video of someone skateboarding forward from <m>n</m> units.
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								<m>-1</m> is like a video of someone skateboarding backwards <m>1</m> unit.
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								<m>-n</m> is like a video of someone skateboarding backwards <m>n</m> units.
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								Multiplying something by <m>-1</m> is like playing the video of something, backwards!
+							</p>
+								</li>
+		
+							</ul>
+						</p>
+
+						<p>
+							Using this idea, how would you explain why it makes sense that <m>-1\times -1</m> should equal <m>1</m>? Complete this dialogue.
+						</p>
+
+						<p>
+							You: <q>Think about what it means to take <m>-1\times 5</m> and <m>-1\times -1</m>.</q> Student 1: <q>So if you play a video of me going forward <m>5</m> units, but you play the video backwards, then it looks like I am going backwards <m>5</m>! And that's <m>-5</m>.</q> Student 2: <q>Okay, so for the other one. <m>-1\times -1</m>. Wait, so if you play the video backwards, but let's say I was going backward in the video …My brain hurts. What does it mean to play a video backwards of someone skating backwards?</q> You: <q>Let's think about this together. ………</q>
+						</p>
+					</statement>
+				</exercise>
+
+				<exercise>
+					<statement>
+						<p>
+							Suppose that you know <m>a^n=\underbrace{a\cdot a\cdot\dots \cdot a}_{n\ times}</m>, for <m>n\in \mathbb{N}^+</m>, and you take for granted that the power properties hold. Use these ideas to explain the values of:
+							<ol>
+								<li>
+													<p>
+								<m>a^0</m>
+							</p>
+								</li>
+		
+								<li>
+													<p>
+								<m>a^{-1}</m>.
+							</p>
+								</li>
+		
+							</ol>
+						</p>
+
+						<p>
+							You can assume <m>a\neq 0</m>.
+						</p>
+
+						<p>
+							In your work, say exactly what power properties you are using for each step of your explanation.
+						</p>
+					</statement>
+				</exercise>
+
+				<exercise>
+					<statement>
+						<p>
+							Suppose that you are teaching powers, and you want to help students use power properties and the definition of powers. What are three different ways to understand the value of <m>(\sqrt[10]{32})^2</m>? In each of your explanations, be specific about what definitions or power properties you are using.
+						</p>
+					</statement>
+				</exercise>
+
+				<exercisegroup><title>To get ready for next time</title>
+
+					<introduction>
+						<p>
+							
+						</p>
+					</introduction>
+
+					<exercise>
+						<statement>
+							<p>
+								<ol>
+									<li>
+														<p>
+									What equation does <m>a^{1/q}</m> solve?
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									Based on this equation, what should <m>(-8)^\frac{1}{3}</m> equal?
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									Find three different ways to simplify the expression <m>(-8)^{2/6}</m>. (Hmm …)
+								</p>
+									</li>
+			
+								</ol>
+							</p>
+						</statement>
+					</exercise>
+		
+					<exercise>
+						<statement>
+							<p>
+								<ol>
+									<li>
+														<p>
+									Does this sequence converge? If so, to what? If not, why not? <m>1^0, \quad (\frac{1}{2})^0,\quad  (\frac{1}{3})^0,\quad (\frac{1}{4})^0, \dots</m>
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									Based on what you have found, what should <m>0^0</m> equal?
+								</p>
+									</li>
+			
+								</ol>
+							</p>
+						</statement>
+					</exercise>
+		
+					<exercise>
+						<statement>
+							<p>
+								<ol>
+									<li>
+														<p>
+									Does this sequence converge? If so, to what? If not, why not? <m>0^1, \quad 0^{\frac{1}{2}}, \quad 0^{\frac{1}{3}}, \quad 0^{\frac{1}{4}}, \dots</m>
+								</p>
+									</li>
+			
+									<li>
+														<p>
+									Based on what you have found, what should <m>0^0</m> equal?
+								</p>
+									</li>
+			
+								</ol>
+							</p>
+						</statement>
+					</exercise>
+		
+					<exercise>
+						<statement>
+							<p>
+								To approximate <m>\pi</m>, we could use its decimal expansion – we take <m>3</m>, then <m>3.1</m>, then <m>3.14</m>, then <m>3.141</m>, then <m>3.1415</m>, then <m>3.14159</m>, etc. 
+								So <m>\pi</m> is the limit of 
+								<me>
+									3,\, 3.1,\, 3.14, \, 3.141, \, 3.1415, \, 3.14159, \dots
+								</me>
+							</p>
+
+							<p>
+								We can do a similar thing with powers! So <m>5^\pi</m> is the limit of 
+								<me>
+									5^3, \, 5^{3.1},\, 5^{3.14}, \, 5^{3.141}, \, 5^{3.1415}, \, 5^{3.14159}, \dots
+								</me>
+							</p>
+
+							<p>
+								<ol>
+									<li>
+										<p>
+											Suppose that you are teaching about real powers, and you use <m>5^\pi</m> as an example. 
+											A student asks you about power properties, and you review them using the example: 
+											<me>
+												5^{3.1}=5^{3+0.1}=5^{3}5^{0.1}.
+											</me> 
+											You ask them to break down <m>5^{3.141}</m> in a similar fashion.
+										</p>
+
+										<p>
+											A student says: <q>We could do this forever! <m>5^\pi</m> is <m>5^{3}5^{0.1}5^{0.04}5^{0.001}5^{0.0005}5^{0.00009}\dots</m></q>
+										</p>
+
+										<p>
+											Another student responds: <q>How did you get all those 0's? why isn't it just <m>5^{3}5^{1}5^{4}5^{1}5^{5}5^{9}\dots</m>?</q>
+										</p>
+
+										<p>
+											Explain why the first student's work makes sense, and help the second student make sense of why the 0's should be there.
+										</p>
+									</li>
+
+									<li>
+										<p>
+											A third student says: <q>Wait a minute ... if <m>5^\pi=5^{3}5^{0.1}5^{0.04}5^{0.001}5^{0.0005}5^{0.00009}\dots</m>, the exponents keep on getting smaller and smaller, so shouldn't that mean that you're multiplying by smaller and smaller numbers. 
+											So each factor <m>5^{3}</m>, <m>5^{0.1}</m>, <m>5^{0.04}</m>, <m>5^{0.001}</m>, <m>5^{0.0005}</m>, <m>5^{0.00009}</m> is getting closer and closer to <m>0</m>. 
+											So then <m>5^\pi</m> should be really tiny, close to 0.</q>
+										</p>
+
+										<p>
+											A fourth student says: <q>I disagree, <m>5^\pi</m> should be larger than <m>5^3</m>, which is <m>125</m>. 
+											That's way bigger than <m>0</m>.</q>
+										</p>
+
+										<p>
+											Prepare for responding to the students. 
+											In your preparations:
+										</p>
+
+										<p>
+											<ul>
+												<li>
+													<p>
+														Help make sense of why even though <m>5^{0.1}</m>, <m>5^{0.04}</m>, <m>5^{0.001}</m>, <m>5^{0.0005}</m>, <m>5^{0.00009}</m>, …, are getting smaller and smaller, that they don't necessarily limit to <m>0</m>
+													</p>
+												</li>
+
+												<li>
+													<p>
+														Explain what this sequence actually limits to
+													</p>
+												</li>
+
+												<li>
+													<p>
+														Explain how to make sense of why <m>5^{3}5^{0.1}5^{0.04}5^{0.001}5^{0.0005}5^{0.00009}\dots</m> is greater than <m>125</m>.
+													</p>
+												</li>
+											</ul>
+										</p>
+									</li>
+								</ol>
+							</p>
+						</statement>
+					</exercise>
+
+				</exercisegroup>
+
+			</exercises>
+			
+		</chapter>
+
+		<chapter xml:id="ch-ii"><title>Real Numbers and Powers</title>
+
+			<section xml:id="sec-2.1"><title>Overview</title>
+
+				<p></p>
+				
+			</section>
+
+			<section xml:id="sec-2.2"><title>Defining Real Numbers and Powers</title>
+
+				<p></p>
+			
+			</section>
+
+			<section xml:id="sec-2.3"><title>Definitions of Powers and Their Properties, with Common Restrictions</title>
+
+				<p></p>
+			
+			</section>
+			
+		</chapter>
+
+    </part>
+
+	<part xml:id="part-ii"><title>From Powers to Logs</title>
+		
+		<chapter xml:id="ch-iv"><title>Exploring Powers, Introducing Logarithms</title>
+
+			<section xml:id="sec-4.1"><title>Working with Power from a Correspondance Perspective</title>
+
+				<p></p>
+			
+			</section>
+
+			<section xml:id="sec-4.2"><title>Setting Up Existence of Logarithms</title>
+
+				<p></p>
+			
+			</section>
+
+			<section xml:id="sec-4.3"><title>Properties of <m>G</m>, the Inverse of <m>F(x)=5^x</m></title>
+
+				<p></p>
+			
+			</section>
+
+			<section xml:id="sec-4.4"><title>Logarithm Definition and Properties</title>
+
+				<p></p>
+			
+			</section>
+
+			<exercises>
+				
+				<exercise>
+					<statement>
+						<p>
+							
+						</p>
+					</statement>
+				</exercise>
+
+			</exercises>
+
+			
+			
+		</chapter>
+
+		<chapter xml:id="ch-v"><title>(Optional) Covariation View: Exponential Growth is Defined by Constant Change Factors</title>
+
+			<section xml:id="sec-5.1"><title>Introducing Constant Change Factors</title>
+
+				<p></p>
+			
+			</section>
+
+			<section xml:id="sec-5.2"><title>Constant Change Factors Are a Key Property of Exponential Growth</title>
+
+				<p></p>
+			
+			</section>
+
+			<section xml:id="sec-5.3"><title>Consequences of Constant Change Factors</title>
+
+				<p></p>
+			
+			</section>
+
+			<section xml:id="sec-5.4"><title>Constant Change Factors Implies Exponential, and Vice Versa</title>
+
+				<p></p>
+			
+			</section>
+
+			<exercises>
+				
+				<exercise>
+					<statement>
+						<p>
+							
+						</p>
+					</statement>
+				</exercise>
+
+			</exercises>
+			
+		</chapter>
+
+	</part>
+
+	<part xml:id="part-iii"><title>Topics in Exponential Expressions of Functions</title>
+
+		<chapter xml:id="ch-vi"><title>Inequalities, Percent Change, and Powers of <m>2</m></title>
+
+			<section xml:id="sec-6.1"><title>Inequalities</title>
+
+				<p></p>
+			
+			</section>
+
+			<section xml:id="sec-6.2"><title>Exponential Functions from a Covariation Perspective</title>
+
+				<p></p>
+			
+			</section>
+
+			<section xml:id="sec-6.3"><title>Relating Constant Percent Change and Constant Change Factor</title>
+
+				<p></p>
+			
+			</section>
+			
+		</chapter>
+
+		<chapter xml:id="ch-vii"><title>Powers and Numbers Together: Base Ten Multiplication</title>
+
+			<section xml:id="sec-7.1"><title>Shabakh, Gelosia, Venetian Squares, Lattice Method</title>
+
+				<p></p>
+			
+			</section>
+			
+		</chapter>
+		
+	</part>
+
+    <backmatter xml:id="backmatter">
+      <title>Backmatter</title>
+
+	  <appendix><title>Digging Deeper</title>
+
+		<section xml:id="sec-3.1"><title>Rational Powers in Music</title>
+
+			<p></p>
+			
+		</section>
+
+		<section xml:id="sec-3.2"><title>Proofs that Power Properties Extend</title>
+
+			<p></p>
+			
+		</section>
+
+		<section xml:id="sec-3.3"><title>Not Every Number is Rational</title>
+
+			<p></p>
+			
+		</section>
+		
+	  </appendix>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+  </book>
+</pretext>
